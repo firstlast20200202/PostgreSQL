@@ -1,1 +1,27 @@
+install PostgreSQL into this folder: C:\Program Files\PostgreSLQ\18
+there's a file called 'installation summary', in the file it shows 'Database Superuser: postgres', use this as username asnd password both
 
+how to get into postgres mode:
+open cmd
+C:\Program files\PostgreSQL\18\bin\lsql.exe -U postgres    //or .\psql.exe
+Password for user postgres: [same as 'postgres']
+
+postgres=# CREATE DATABASE FORUM;
+CREATE DATABASE
+postgres=# \conninfo
+
+postgres=# \! cls
+
+postgres=# CREATE TABLE users (    //case sensitive
+postgres=# user_id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+postgres=# username varchar(50) NOT NULL UNIQUE,
+postgres=# email varchar(255) NOT NULL UNIQUE
+postgres=# );
+CREATE TABLE
+
+postgres=# \dt    //show database relationship
+
+
+
+postgres=# SELECT *l
+postgres=# \q
