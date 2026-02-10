@@ -59,6 +59,24 @@ the section above is how to create, drop database and tables in postgres
 the section below is how t omanipulate data in postgres
 #############################################################
 
+re-create the table: run each part below (when I say 'run' it means that uncomment each part of the sql scripts and execute \i db.sql in terminal)
+CREATE TABLE users (    //case sensitive
+user_id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+username varchar(50) NOT NULL UNIQUE,
+email varchar(255) NOT NULL UNIQUE
+);
+
+ALTER TABLE users
+ADD COLUMN name varchar(30) NOT NULL;
+
+INSERT INTO users (username, email, name)
+VALUES ('Calcur', 'calcur@gmail.com', 'Calab Curry');
+SELECT * FROM users;
+
+
+
+
+
 
 postgres=# SELECT *l
 postgres=# \q
