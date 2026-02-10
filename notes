@@ -113,6 +113,25 @@ SELECT * FROM posts;
 postgres=# \i db.sql
 
 //to show joints
+SELECT * FROM posts INNER JOIN users ON posts.user_id = users.user_id;
+postgres=# \i db.sql
+SELECT title, username FROM posts INNER JOIN users ON posts.user_id = users.user_id;
+postgres=# \i db.sql
+
+//to view it easily without drawing it every time, it can be written in this format
+CREATE VIEW post_info AS
+  SELECT title, username
+  FROM posts INNER JOIN users
+  ON posts.user_id = users.user_id;
+
+postgres=# \i db.sql
+CREATE VIEW
+SELECT * FROM post_info;
+postgres=# \i db.sql
+
+
+
+
 
 
 
