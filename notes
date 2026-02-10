@@ -21,6 +21,43 @@ CREATE TABLE
 
 postgres=# \dt    //show database relationship
 
+create a new file rather than new text file in VS code, name it as 'db.sql', then copy the contents below into it:
+CREATE TABLE users (    //case sensitive
+user_id int GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+username varchar(50) NOT NULL UNIQUE,
+email varchar(255) NOT NULL UNIQUE
+);
+
+in 'View' tab open terminal:
+> psql -h localhost -d postgres    //it shows up 'psql not recognised' error
+the solution is: type 'environment' in start tab in windows, then select 'edit environment variables for your account' rather than 'edit the system environment variables', add 'C:\Program Files\PostgreSQL\18\bin' into 'Path' under 
+'User variables for [user]', re-open terminal, then the command should work.
+
+> psql -h localhost -d postgres     //actually this command is not needed
+get into the direct folder of the db.sql file, otherwise it would show 'No such file or directory' when run the scripts below.
+> psql.exe -U postgres     //then input password
+> \i db.sql    //read input from a specified file and execute its contents
+
+then add the contents below into the db.sql file:
+ALTER TABLE users
+ADD COLUMN name varchar(30) NOT NULL;
+then in terminal:
+> \i db.sql
+> \d users    //display details of the table
+
+then in db.sql file, add:
+DROP TABLE users;
+
+in terminal:
+postgres=# \i db.sql
+DROP TABLE
+postgres=# \d users
+Did not find any relation named "users".
+
+#############################################################
+the section above is how to create, drop database and tables in postgres
+the section below is how t omanipulate data in postgres
+#############################################################
 
 
 postgres=# SELECT *l
