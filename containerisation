@@ -1,4 +1,4 @@
-use a PostgreSQL DB to replace an old architecture that relied on Windows/IIS and SQL Server DB:
+use a PostgreSQL DB to replace a Windows/IIS/SQL Server stack:
 decouple data from Windows OS and migrate it into an isolated, portable Linux container.
 step 1: create the PostgreSQL Docker Infrastructure
         create a file named docker-compose.yml in our project root
