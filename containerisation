@@ -1,3 +1,5 @@
 to containerize a PostgreSQL DB to replace an old architecture that relied on Windows/IIS and a legacy database (like SQL Server):
 decouple data from Windows OS and migrate it into an isolated, portable Linux container.
 step 1: convert DB schema (dbo to public)
+        ALTER DATABASE modern_db SET search_path TO public, dbo;
+step 2: 
