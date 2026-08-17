@@ -11,8 +11,8 @@ convert data from SQL Server to Postgres: use pgloader
 
 schema conversion:
 use SCT to do it first, then manually review 2333...
-SQL Server	        PostgreSQL	                        Usually auto-converted?	        
-INT IDENTITY	        GENERATED ... AS IDENTITY / SERIAL	✅	                        
+SQL Server	                PostgreSQL	                        Usually auto-converted?	        
+INT IDENTITY	                GENERATED ... AS IDENTITY / SERIAL	✅	                        
 BIT	                BOOLEAN	                                ✅	                        
 NVARCHAR(MAX)	        TEXT	                                ✅	                        
 DATETIME	        TIMESTAMP	                        ✅	                        
