@@ -11,16 +11,16 @@ convert data from SQL Server to Postgres: use pgloader
 
 schema conversion:
 use SCT to do it first, then manually review 2333...
-SQL Server	        PostgreSQL	                        Usually auto-converted?	        Notes
-INT IDENTITY	        GENERATED ... AS IDENTITY / SERIAL	✅	                        PostgreSQL Identity is recommended for new projects rather than SERIAL.
-BIT	                BOOLEAN	                                ✅	                        Usually straightforward.
-NVARCHAR(MAX)	        TEXT	                                ✅	                        Usually straightforward.
-DATETIME	        TIMESTAMP	                        ✅	                        Verify the intended time-zone semantics.
-UNIQUEIDENTIFIER	UUID	                                ✅	                        Usually straightforward.
-[ColumnName]	        columnname / "ColumnName"	        ✅	                        Pay close attention to case sensitivity.
-dbo	                public	                                ✅ / ⚠️	                        Don't automatically change dbo to public; the target schema should be decided based on the application's design.
-GO	                ;	                                ✅ / ⚠️	                        GO is not SQL. It is a batch separator used by SQL Server client tools. It cannot always be replaced directly with ;.
-GETDATE()	        CURRENT_TIMESTAMP / NOW()	        ✅	                        Usually straightforward.
-ISNULL()	        COALESCE()	                        ✅	                        Usually straightforward, but type behavior and semantics should be verified.
-@@ROWCOUNT	        GET DIAGNOSTICS ... ROW_COUNT	        ⚠️	                        Cannot be replaced one-to-one. The surrounding logic usually needs to be rewritten.
+SQL Server	        PostgreSQL	                        Usually auto-converted?	        
+INT IDENTITY	        GENERATED ... AS IDENTITY / SERIAL	✅	                        
+BIT	                BOOLEAN	                                ✅	                        
+NVARCHAR(MAX)	        TEXT	                                ✅	                        
+DATETIME	        TIMESTAMP	                        ✅	                        
+UNIQUEIDENTIFIER	UUID	                                ✅	                        
+[ColumnName]	        columnname / "ColumnName"	        ✅	                        
+dbo	                public	                                ✅ / ⚠️	                        
+GO	                ;	                                ✅ / ⚠️	                        
+GETDATE()	        CURRENT_TIMESTAMP / NOW()	        ✅	                        
+ISNULL()	        COALESCE()	                        ✅	                        
+@@ROWCOUNT	        GET DIAGNOSTICS ... ROW_COUNT	        ⚠️	                        
 
