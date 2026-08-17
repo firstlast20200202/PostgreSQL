@@ -11,16 +11,16 @@ convert data from SQL Server to Postgres: use pgloader
 
 schema conversion:
 use SCT to do it first, then manually review 2333...
-SQL Server	        PostgreSQL	                              
-INT IDENTITY	        GENERATED ... AS IDENTITY / SERIAL		                        
-BIT	                BOOLEAN	                                                        
-NVARCHAR(MAX)	        TEXT	                                                        
-DATETIME	        TIMESTAMP	                        	                        
-UNIQUEIDENTIFIER	UUID	                                                        
-[ColumnName]	        columnname / "ColumnName"	        	                        
-dbo	                public	                                partially auto-converted                      
-GO	                ;	                                partially auto-converted                        
-GETDATE()	        CURRENT_TIMESTAMP / NOW()	        	                        
-ISNULL()	        COALESCE()	                        	                        
-@@ROWCOUNT	        GET DIAGNOSTICS ... ROW_COUNT	        not auto-converted	                        
+SQL Server	                        PostgreSQL	                              
+INT IDENTITY	                        GENERATED ... AS IDENTITY / SERIAL		                        
+BIT	                                BOOLEAN	                                                        
+NVARCHAR(MAX)	                        TEXT	                                                        
+DATETIME	                        TIMESTAMP	                        	                        
+UNIQUEIDENTIFIER	                UUID	                                                        
+[ColumnName]	                        columnname / "ColumnName"	        	                        
+dbo	                                public	                                partially auto-converted                      
+GO	                                ;	                                partially auto-converted                        
+GETDATE()	                        CURRENT_TIMESTAMP / NOW()	        	                        
+ISNULL()	                        COALESCE()	                        	                        
+@@ROWCOUNT	                        GET DIAGNOSTICS ... ROW_COUNT	        not auto-converted	                        
 
