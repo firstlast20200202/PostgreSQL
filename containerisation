@@ -7,3 +7,7 @@ step 3: expose network ports
 step 4: migrate schema and data
 step 5: update connection strings
 
+convert data from SQL Server to Postgres: use pgloader
+
+schema conversion:
+use SCT to do it first, then manually review 2333...
