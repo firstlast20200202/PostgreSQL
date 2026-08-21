@@ -10,7 +10,7 @@ step 5: update connection strings
 convert data from SQL Server to Postgres: use pgloader
 
 schema conversion:
-use SCT to do it first, then manually review 2333...
+use SCT to do it first, then manually revise 2333...
 SQL Server	                        PostgreSQL	                              
 INT IDENTITY	                        GENERATED ... AS IDENTITY / SERIAL		                        
 BIT	                                BOOLEAN	                                                        
