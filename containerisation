@@ -21,8 +21,12 @@ postgres=#                                          //output
 postgres=# \q                                       //quit
 $                                                   //output
 
+step 3: generate scripts to create SQL server DB schema
 
-step 3: expose network ports
+
+
+
+
 step 4: migrate schema and data
 step 5: update connection strings
 
