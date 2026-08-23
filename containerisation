@@ -18,6 +18,8 @@ postgres=# \c my_new_db                             //switch to the new DB
 my_new_db=#                                         //output
 my_new_db=# \c postgres                             //switch back
 postgres=#                                          //output
+postgres=# \q                                       //quit
+$                                                   //output
 
 
 step 3: expose network ports
