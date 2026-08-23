@@ -1,8 +1,8 @@
 use a PostgreSQL DB to replace a Windows/IIS/SQL Server stack:
 step 1: pull the postgres image and run
 $ podman pull docker.io/library/postgres --tls-verify=false
-$ podman inspect docker.io/library/postgres                                    //to get the exposed port (here 5432)
-$ podman run --tls-verify=false -p 1234:5432 -d docker.io/library/postgres     //host port:container port
+$ podman inspect docker.io/library/postgres                                    //to get the ExposedPorts (here 5432)
+$ podman run --tls-verify=false -p 1234:5432 -d docker.io/library/postgres     //host port:container port, host port value can be 1024-65535
 step 2: spin up the container
 step 3: expose network ports
 step 4: migrate schema and data
