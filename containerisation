@@ -9,9 +9,17 @@ note:
 copy ouput contents ctrl+shift+C
 remove a container: $ podman rm -f <container-name>
 
+step 2: get into the container
+$ podman exec -it my-postgres psql -U postgres
+postgres=#                                          //output                                    
+postgres=# CREATE DATABASE my_new_db
+CREATE DATABASE                                     //output 
+postgres=# \c my_new_db                             //switch to the new DB
+my_new_db=#                                         //output
+my_new_db=# \c postgres                             //switch back
+postgres=#                                          //output
 
 
-step 2: spin up the container
 step 3: expose network ports
 step 4: migrate schema and data
 step 5: update connection strings
