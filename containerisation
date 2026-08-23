@@ -1,7 +1,8 @@
 use a PostgreSQL DB to replace a Windows/IIS/SQL Server stack:
-decouple data from Windows OS and migrate it into an isolated, portable Linux container.
-step 1: create the PostgreSQL Docker Infrastructure
-        create a file named docker-compose.yml in our project root
+step 1: pull the postgres image and run
+$ podman pull docker.io/library/postgres --tls-verify=false
+$ podman inspect docker.io/library/postgres
+$ podman run --tls-verify=false -p 1234:5432 -d docker.io/library/postgres
 step 2: spin up the container
 step 3: expose network ports
 step 4: migrate schema and data
