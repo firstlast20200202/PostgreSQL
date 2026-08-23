@@ -6,7 +6,7 @@ $ podman run --% -d --name my-postgres -p 1234:5432 -v pgdata:/var/lib/postgresq
                                                                                //host port:container port, host port value can be 1024-65535
 $ podman ps                                                                    //verify
 note: 
-copy ouput contents ctrl+shift+C
+copy output contents: ctrl+shift+C
 remove a container: $ podman rm -f <container-name>
 
 step 2: get into the container
