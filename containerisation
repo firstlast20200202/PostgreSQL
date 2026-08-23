@@ -21,7 +21,7 @@ postgres=#                                          //output
 postgres=# \q                                       //quit
 $                                                   //output
 
-step 3: generate scripts to create SQL server DB schema
+step 3: generate scripts in Microsoft SQL Server Management Studio to create SQL server DB schema
 
 
 
