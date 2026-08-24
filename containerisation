@@ -21,13 +21,16 @@ postgres=#                                          //output
 postgres=# \q                                       //quit
 $                                                   //output
 
-step 3: generate scripts in Microsoft SQL Server Management Studio to create DB schema
+step 3: right click the DB -> Tasks -> generate scripts in Microsoft SQL Server Management Studio to create DB schema, it'll export a .sql file
+
+step 4: data conversion
 
 
 
 
 
-step 4: migrate schema and data
+
+
 step 5: update connection strings
 
 convert data from SQL Server to Postgres: use pgloader
