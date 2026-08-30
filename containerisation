@@ -24,12 +24,8 @@ $                                                   //output
 step 3: right click the DB -> Tasks -> generate scripts in Microsoft SQL Server Management Studio to create DB schema, it'll export a .sql file
 
 step 4: data conversion with pgloader
-$ podman run --rm -it dimitri/pgloader:latest pgloader --help
 $ podman run --rm -it dimitri/pgloader:latest pgloader mysql://user:password@host/db_name postgresql://user:password@host/db_name
-OR:
-$ wsl --install
-$ sudo apt update
-$ sudo apt install pgloader
+doesnt work... might be because of using SQL Server Management Light version, try developer version instead
 
 
 
