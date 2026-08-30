@@ -25,7 +25,7 @@ step 3: right click the DB -> Tasks -> generate scripts in Microsoft SQL Server 
 
 step 4: data conversion with pgloader
 $ podman run --rm -it dimitri/pgloader:latest pgloader mysql://user:password@host/db_name postgresql://user:password@host/db_name
-doesnt work... might be because of using SQL Server Management Light version, try developer version instead
+pgloader couldnt connect to local SQL DB due to using namedpipe instead of TCP.. try SQL Server Management developer version instead of Light version
 
 
 
